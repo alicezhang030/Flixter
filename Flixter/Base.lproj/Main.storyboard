@@ -202,6 +202,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="T9J-Qn-o12">
+                                    <rect key="frame" x="0.0" y="-88" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllMoviesCell" id="UnL-xr-a9V" customClass="AllMoviesCell">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="200"/>
@@ -229,6 +233,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" id="iN8-gI-K6d"/>
                     <connections>
+                        <outlet property="allMoviesSpinner" destination="T9J-Qn-o12" id="o0B-yr-J80"/>
                         <outlet property="collectionView" destination="g8g-4k-Z5W" id="P3S-89-hOp"/>
                     </connections>
                 </viewController>

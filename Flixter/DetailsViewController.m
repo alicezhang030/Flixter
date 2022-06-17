@@ -20,9 +20,9 @@
 @implementation DetailsViewController
 
 - (void)viewDidLoad {
-    NSLog(@"%@", self.detailDict);
     [super viewDidLoad];
     
+    //bold the header labels
     [self.movieHeaderLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [self.overviewHeaderLabel setFont:[UIFont boldSystemFontOfSize:16]];
 
@@ -36,13 +36,8 @@
     //setting the movie poster and backdrop
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = self.detailDict[@"poster_path"];
-    NSString *backdropURLString = self.detailDict[@"backdrop_path"];
-    
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
-    NSString *fullBackdropURLString = [baseURLString stringByAppendingString:backdropURLString];
-    
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
-    NSURL *backdropURL = [NSURL URLWithString:fullBackdropURLString];
     
     self.detailsPosterView.image = nil; //clear out the previous image
     [self.detailsPosterView setImageWithURL:posterURL];

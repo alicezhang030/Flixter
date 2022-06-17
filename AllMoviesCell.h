@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AllMoviesCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *allMoviesPoster;
+@property (weak, nonatomic) IBOutlet UIImageView *allMoviesPoster; //poster view in the "Movies" tab
 
 @end
 
