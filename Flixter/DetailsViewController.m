@@ -30,12 +30,12 @@
     self.detailsMovieLabel.text = self.detailDict[@"original_title"];
     self.detailsSynopsisLabel.text = self.detailDict[@"overview"];
     
-    [self.detailsMovieLabel sizeToFit];
+    //[self.detailsMovieLabel sizeToFit];
     [self.detailsSynopsisLabel sizeToFit];
     
     //setting the movie poster and backdrop
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
-    NSString *posterURLString = self.detailDict[@"poster_path"];
+    NSString *posterURLString = self.detailDict[@"backdrop_path"];
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     
