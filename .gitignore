@@ -1,2 +1,3 @@
-/FlixterTests
-/FlixterUITests
+FlixterTests/
+FlixterUITests/
+build/

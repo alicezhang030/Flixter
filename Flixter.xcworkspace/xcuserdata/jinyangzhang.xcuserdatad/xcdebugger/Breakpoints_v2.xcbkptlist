@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "14C5AFFA-CA1D-4CE7-AA8E-1BE411E000FD"
-   type = "1"
+   uuid = "5A41778B-790E-47F2-8829-624C99D00B53"
+   type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B2A2CD16-8B94-49AA-8DCB-97D723D6AE14"
+            uuid = "355F919E-709C-471A-9BDA-5402C10DD360"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flixter/MovieViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "-tableView:numberOfRowsInSection:"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-searchBar:textDidChange:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

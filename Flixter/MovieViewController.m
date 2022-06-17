@@ -10,12 +10,14 @@
 #import "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h"
 
-@interface MovieViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MovieViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *movies;
+@property (strong, nonatomic) NSArray *filteredMovies;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl; //pull down and refresh the page
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner; //spinner while waiting for API
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -33,6 +35,9 @@
     
     [self fetchMovies];
     
+    //setting up search bar
+    self.searchBar.delegate = self;
+    
     //refresh functionality
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
@@ -42,7 +47,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier: @"MovieCell"];
     
-    NSDictionary *movie = self.movies[indexPath.row]; //get the movie of interest
+    NSDictionary *movie = self.filteredMovies[indexPath.row]; //get the movie of interest
     
     //set title and synopsis
     cell.titleLabel.text = movie[@"title"];
@@ -58,6 +63,21 @@
     [cell.posterView setImageWithURL:posterURL];
     
     return cell;
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if (searchText.length != 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+            //turning strings to lowercase so that search isn't case-sensitive
+            return [[evaluatedObject[@"title"] lowercaseString] containsString:[searchText lowercaseString]];
+        }];
+        
+        self.filteredMovies = [self.movies filteredArrayUsingPredicate:predicate];
+    } else { //resets the list of movies to all movies if search bar is empty
+        self.filteredMovies = self.movies;
+    }
+       
+    [self.tableView reloadData];
 }
 
 - (void)fetchMovies {
@@ -89,6 +109,8 @@
 
                //get the array of movies
                self.movies = dataDictionary[@"results"];
+               //initially, the filtered movies = the original list of movies
+               self.filteredMovies = self.movies;
                //reload table view data
                [self.tableView reloadData];
                //stops the loading spinner
@@ -103,7 +125,7 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.movies.count;
+    return self.filteredMovies.count;
 }
 
  #pragma mark - Navigation
