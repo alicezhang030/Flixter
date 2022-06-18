@@ -1,4 +1,4 @@
-# Project 1 - *Name of App Here*
+# Project 1 - *Flixter*
 
 **Flixter** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
@@ -23,14 +23,16 @@ The following **optional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. Implementing filter and sort functionalities
-2. Storing user reviews of movies in databases and displaying them on the app
+1. Implementing filter and sort functionalities for the movies
+2. Allowing users to leave reviews of the movies 
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of the implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/Showcase%20vid%201.gif)
+![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/no%20network.gif)
+![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/very%20bad%20network%20showcase.gif)
 
 GIF created with [Kap](https://getkap.co/).
 
