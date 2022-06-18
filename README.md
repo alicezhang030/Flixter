@@ -42,7 +42,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-1. Since I've never used Objective-C before, understanding the syntax and learning to debug Objective-C code was hard at first. 
+1. Since I've never used Objective-C before, understanding the syntax and learning how to debug Objective-C code was hard at first. 
 2. I also found it hard at first to use storyboard. While I've used design tools like Figma before, I've never used something that connects design with code so directly.
 
 ## Credits
