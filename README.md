@@ -30,7 +30,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of the implemented features:
 
-Loading state while waiting for the movies API:
+App icon on the home screen, styled launch screen, and loading state while waiting for the movies API:
 ![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/very%20bad%20network%20showcase.gif)
 Error message when there's a networking error:
 ![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/no%20network.gif)
