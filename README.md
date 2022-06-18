@@ -30,9 +30,13 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of the implemented features:
 
-![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/Showcase%20vid%201.gif)
-![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/no%20network.gif)
+Loading state while waiting for the movies API:
 ![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/very%20bad%20network%20showcase.gif)
+Error message when there's a networking error:
+![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/no%20network.gif)
+All other features:
+![](https://github.com/alicezhang030/Flixter/blob/main/Showcase%20vids/Showcase%20vid%201.gif)
+
 
 GIF created with [Kap](https://getkap.co/).
 
